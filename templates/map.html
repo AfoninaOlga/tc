@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Terroir Evaluation</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+        <link rel="stylesheet" href="static/css/dropdown.css"/>
+        <link rel="stylesheet" href="static/css/map.css"/>
+        <link rel="icon" type="image/png" href="static/icon.png">
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+             crossorigin="">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div id="head">
+            <div id="prog-name">
+               <h3>Terroir Evaluation</h3>
+            </div>
+            <div id="icon">
+                <img src="static/icon.png" class="ribbon"/>
+            </div>
+        </div>
+        <div id = "map"></div>
+        <ul class="nav">
+            <li><div class="dropdown">
+                <button class="dropbtn">Terroir index</button>
+                <div id="indexDropdown" class="dropdown-content"></div>
+            </div></li>
+            <li><div class="dropdown">
+                <button class="dropbtn">Grape variety</button>
+                <div id="grapeDropdown" class="dropdown-content">
+                    <input type="text" placeholder="Search grape variety.." id="grapeInput" onkeyup="filterFunction('grapeInput', 'grapeDropdown')">
+                </div>
+            </div></li>
+            <li><div class="dropdown">
+            <button class="dropbtn">Canton</button>
+            <div id="cantonDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search canton.." id="cantonInput" onkeyup="filterFunction('cantonInput', 'cantonDropdown')">
+            </div>
+            </div></li>
+        </ul>
+        <script src = "static/js/data.js"></script>
+        <script src = "static/js/map.js"></script>
+        <script src = "static/js/dropdown.js"></script>
+    </body>
+
+</html>
+
