@@ -1,7 +1,7 @@
 from flask import Flask, render_template, json, jsonify
 
 from models import Canton, Grape
-from evaluation import get_suitability
+# from evaluation import get_suitability
 
 app = Flask(__name__)
 
@@ -23,9 +23,9 @@ def get_by_grape(grape_id):
     return jsonify(data)
 
 
-@app.route('/suitability/<int:code>', methods=['GET'])
-def get_suit(code: int):
-    return jsonify(get_suitability(code))
+# @app.route('/suitability/<int:code>', methods=['GET'])
+# def get_suit(code: int):
+#    return jsonify(get_suitability(code))
 
 
 @app.route('/grapes', methods=['GET'])
